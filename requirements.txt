@@ -1,0 +1,25 @@
+# === Core Python Libraries ===
+numpy
+pandas
+tqdm
+requests
+matplotlib
+
+# === Image and Raster Processing ===
+Pillow
+rasterio
+opencv-python
+scikit-image
+
+# === Machine Learning / Deep Learning ===
+torch
+torchvision
+segmentation-models-pytorch
+
+# === Utility and Environment ===
+python-dotenv
+pyyaml
+
+# === Optional (if using Jupyter for experiments) ===
+jupyter
+notebook

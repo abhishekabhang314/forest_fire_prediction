@@ -1,0 +1,43 @@
+# Data
+data/
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Environments
+.env
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+__pycache__/
+
+# Data and outputs
+data/*/raw/
+data/*/processed/
+*.tif
+*.pgw
+*.xml
+*.csv
+*.npy
+*.h5
+*.pth
+*.pt
+*.model
+*.log
+
+# IDE configs
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/

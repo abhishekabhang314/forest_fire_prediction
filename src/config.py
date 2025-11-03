@@ -10,17 +10,41 @@ This file contains:
 
 import os
 
-# === Base Paths ===
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+import os
 
-# Data directories
+# Base project structure
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 MODELS_DIR = os.path.join(BASE_DIR, "models")
 OUTPUT_DIR = os.path.join(BASE_DIR, "outputs")
 
+# -------------------------------------------------------------------
+# Region-based directory helper
+# -------------------------------------------------------------------
+def get_region_paths(region_name: str):
+    """
+    Returns all relevant paths for a given region, following the structure:
+    data/<region_name>/processed/images
+    data/<region_name>/processed/masks
+    """
+    region_dir = os.path.join(DATA_DIR, region_name)
+    processed_dir = os.path.join(region_dir, "processed")
+
+    return {
+        "region_dir": region_dir,
+        "processed_dir": processed_dir,
+        "images_dir": os.path.join(processed_dir, "images"),
+        "masks_dir": os.path.join(processed_dir, "masks"),
+        "weather_csv": os.path.join(processed_dir, "weather.csv"),
+    }
+
+# -------------------------------------------------------------------
+# Create required base folders
+# -------------------------------------------------------------------
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
 
 
 # === Region Coordinates (approximate center points for weather API) ===

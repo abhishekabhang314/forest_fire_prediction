@@ -2,24 +2,28 @@
 numpy
 pandas
 tqdm
-requests
 matplotlib
-
-# === Image and Raster Processing ===
+requests
 Pillow
-rasterio
 opencv-python
 scikit-image
 
-# === Machine Learning / Deep Learning ===
+# === Deep Learning ===
 torch
 torchvision
 segmentation-models-pytorch
 
-# === Utility and Environment ===
+# === Geospatial and Raster Processing ===
+rasterio
+
+# === Frontend / Visualization ===
+streamlit
+plotly
+
+# === Utility ===
 python-dotenv
 pyyaml
 
-# === Optional (if using Jupyter for experiments) ===
+# === Optional (Jupyter, for experiments) ===
 jupyter
 notebook

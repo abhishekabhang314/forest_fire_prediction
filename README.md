@@ -1,10 +1,6 @@
----
-
 # 🌲 Forest Fire Detection & Simulation using Deep Learning (U-Net)
 
-### 🔥 AI-Powered Satellite Image Analysis for Fire Risk Mapping
-
----
+🔥 AI-Powered Satellite Image Analysis for Fire Risk Mapping
 
 ## 📖 Overview
 
@@ -13,16 +9,12 @@ This project focuses on **detecting and simulating forest fires** using **AI/ML 
 
 We use a **U-Net deep learning model** to segment fire zones from satellite imagery and provide a **Streamlit-based frontend** to visualize predictions interactively.
 
----
-
 ## 🎯 Objectives
 
 1. **Detect fire zones** from satellite images (binary segmentation: fire / no-fire).
 2. **Integrate weather data** (temperature, humidity, wind speed, etc.) to enhance accuracy.
 3. **Visualize predictions** with a web app for real-time uploads and overlays.
 4. **Evaluate model accuracy** using IoU, Dice, and Accuracy metrics.
-
----
 
 ## 🧠 Project Workflow
 
@@ -44,15 +36,11 @@ We use a **U-Net deep learning model** to segment fire zones from satellite imag
   * Wind Speed (m/s)
   * Precipitation (mm)
 
----
-
 ### **2️⃣ Data Processing (`src/data_preprocessor.py`)**
 
 * Converts raster data and overlays into model-ready image/mask pairs.
 * Resizes and normalizes inputs to `256x256`.
 * Aligns weather data with imagery date stamps.
-
----
 
 ### **3️⃣ Model Training (`src/train_model.py`)**
 
@@ -68,8 +56,6 @@ Trained models are saved in the `models/` directory:
 models/unet_alberta.pth
 ```
 
----
-
 ### **4️⃣ Model Evaluation (`src/evaluate_model.py`)**
 
 * Calculates:
@@ -82,15 +68,11 @@ models/unet_alberta.pth
   * Ground truth vs. predicted mask
   * Mean metric chart (`outputs/metrics_chart.png`)
 
----
-
 ### **5️⃣ Prediction (`src/predict_fire.py`)**
 
 * Loads the trained model.
 * Predicts fire zones for a new satellite image.
 * Saves overlayed output (`outputs/custom_prediction.png`).
-
----
 
 ### **6️⃣ Streamlit Frontend (`app/streamlit_app.py`)**
 
@@ -106,8 +88,6 @@ streamlit run app/streamlit_app.py
 * View predicted fire overlays in red.
 * Download prediction result.
 * Interactive UI built with Streamlit.
-
----
 
 ## 🗂️ Project Structure
 
@@ -144,8 +124,6 @@ forest_fire_prediction/
 ├── requirements.txt
 └── README.md
 ```
-
----
 
 ## ⚙️ Installation & Setup
 
@@ -190,8 +168,6 @@ python -m src.train_model
 streamlit run app/streamlit_app.py
 ```
 
----
-
 ## 📊 Sample Results
 
 |   Metric  |  Value |
@@ -202,8 +178,6 @@ streamlit run app/streamlit_app.py
 
 *These values can improve with more data and weather integration.*
 
----
-
 ## 🚀 Future Improvements
 
 * Integrate **live weather data** during prediction.
@@ -211,12 +185,9 @@ streamlit run app/streamlit_app.py
 * Deploy Streamlit app to **Streamlit Cloud** or **AWS EC2**.
 * Build **temporal models** (ConvLSTM) for multi-day predictions.
 
----
-
 ## 🧑‍💻 Authors
 
 **Abhishek Abhang** AI & Geospatial Enthusiast
 * 📧 [abhishekabhang2004@gmail.com](mailto:abhishekabhang2004@gmail.com)
 * 💼 GitHub: [github.com/abhishekabhang314](https://github.com/abhishekabhang314)
 
----

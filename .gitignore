@@ -34,6 +34,7 @@ data/*/processed/
 *.h5
 *.pth
 *.pt
+*.model
 *.log
 
 # IDE configs

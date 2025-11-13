@@ -1,8 +1,12 @@
 temp.py
+backend/eve_app.py
+backend/new_app.py
 
 # Data
 data/
 outputs/
+frontend/
+models/
 
 # OS
 .DS_Store

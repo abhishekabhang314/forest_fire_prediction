@@ -130,7 +130,7 @@ forest_fire_prediction/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/forest_fire_prediction.git
+git clone https://github.com/abhishekabhang314/forest_fire_prediction.git
 cd forest_fire_prediction
 ```
 
